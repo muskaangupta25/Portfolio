@@ -1,72 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Muskaan Gupta</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-<header class="nav-wrap">
-  <nav class="nav">
-    <div class="brand-title">Muskaan Gupta</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a class="active" href="projects.html">Projects</a></li>
-      
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main class="container">
-  <section class="section">
-    <h2>Projects</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Agent-6: AI Insights App</h3>
-        <p>LLM agents analyze uploaded datasets and generate insights and charts.</p>
-        <div class="tags">
-          <span>Python</span><span>Streamlit</span><span>LLMs</span>
-        </div>
+  <header class="nav-wrap">
+    <nav class="nav">
+      <div class="brand">
+        <div class="brand-title">Muskaan Gupta</div>
+        <div class="brand-subtitle">DATA • AI • PRODUCT</div>
       </div>
 
-      <div class="card">
-        <h3>Climate vs. Capitalism</h3>
-        <p>Interactive dashboard comparing waste and sustainability metrics globally.</p>
-        <div class="tags">
-          <span>Pandas</span><span>Plotly</span><span>Geo</span>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="projects-hero reveal" style="--delay:0ms;">
+      <h1 class="projects-title">PROJECTS</h1>
+      <p class="projects-subtitle">
+        A curated set of things I’ve built — mostly data, AI, and web experiences.
+      </p>
+
+      <div class="projects-controls">
+        <div class="filter-pills">
+          <button class="pill-btn is-active" data-filter="all">All</button>
+          <button class="pill-btn" data-filter="ai">AI / Agents</button>
+          <button class="pill-btn" data-filter="data">Data / Analytics</button>
+          <button class="pill-btn" data-filter="web">Web</button>
         </div>
+
+        <input class="search" type="text" placeholder="Search projects..." aria-label="Search projects" />
       </div>
 
-      <div class="card">
-        <h3>CalmCompass</h3>
-        <p>Mental health tracking app with affirmations and calm UX design.</p>
-        <div class="tags">
-          <span>React</span><span>UI/UX</span>
+      <div class="projects-rule"></div>
+    </section>
+
+    <section class="projects-grid">
+
+      <!-- 01 AGENT 6 -->
+      <article class="project-card reveal" data-tags="ai data web" style="--delay:120ms;">
+        <div class="project-media">
+          <img src="assets/agent6.jpg" alt="AGENT 6 screenshot" loading="lazy">
         </div>
+
+        <div class="project-body">
+          <div class="project-top">
+            <div class="project-badge">01</div>
+            <div>
+              <h2>AGENT 6</h2>
+              <p class="project-desc">
+                Designed and implemented Python-based software systems to ingest data, orchestrate ML workflows, and generate automated insights.
+              </p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">AI</span>
+            <span class="chip">Data</span>
+            <span class="chip">Web</span>
+            <span class="chip">Python</span>
+          </div>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://github.com/muskaangupta25?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
+            <button class="link-btn primary video-btn" data-video="assets/agent6.mp4">Demo Video</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Climate vs. Capitalism -->
+      <article class="project-card reveal" data-tags="data web" style="--delay:160ms;">
+        <div class="project-media">
+          <img src="assets/climate.jpg" alt="Climate vs. Capitalism screenshot" loading="lazy">
+        </div>
+
+        <div class="project-body">
+          <div class="project-top">
+            <div class="project-badge">02</div>
+            <div>
+              <h2>Climate vs. Capitalism</h2>
+              <p class="project-desc">
+                Analyzed large datasets to compare regional performance and identify trends across countries.
+              </p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Data</span>
+            <span class="chip">Web</span>
+            <span class="chip">Analytics</span>
+          </div>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://github.com/muskaangupta25?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
+            <button class="link-btn primary video-btn" data-video="assets/climate.mp4">Demo Video</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 CalmCompass -->
+      <article class="project-card reveal" data-tags="web" style="--delay:200ms;">
+        <div class="project-media">
+          <img src="assets/calm.jpg" alt="CalmCompass screenshot" loading="lazy">
+        </div>
+
+        <div class="project-body">
+          <div class="project-top">
+            <div class="project-badge">03</div>
+            <div>
+              <h2>CalmCompass</h2>
+              <p class="project-desc">
+                Built authentication, APIs, and frontend components in a cloud-based architecture; implemented user flows, forms, and dashboards following modern UX/UI best practices.
+              </p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Web</span>
+            <span class="chip">Auth</span>
+            <span class="chip">UI/UX</span>
+          </div>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://github.com/muskaangupta25?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
+            <button class="link-btn primary video-btn" data-video="assets/calm.mp4">Demo Video</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 Healthcare Analytics Dashboard -->
+      <article class="project-card reveal" data-tags="ai data web" style="--delay:240ms;">
+        <div class="project-media">
+          <img src="assets/health.jpg" alt="Healthcare Analytics Dashboard screenshot" loading="lazy">
+        </div>
+
+        <div class="project-body">
+          <div class="project-top">
+            <div class="project-badge">04</div>
+            <div>
+              <h2>Healthcare Analytics Dashboard</h2>
+              <p class="project-desc">
+                Built and evaluated time-series and machine learning models (regression, forecasting) using Python to drive data-informed decisions.
+              </p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">AI</span>
+            <span class="chip">Data</span>
+            <span class="chip">Forecasting</span>
+            <span class="chip">Python</span>
+          </div>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://github.com/muskaangupta25?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
+            <button class="link-btn primary video-btn" data-video="https://www.youtube.com/embed/QGIaRUfs1Os">Demo Video</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 Bitcoin Historical Data Analysis -->
+      <article class="project-card reveal" data-tags="data" style="--delay:280ms;">
+        <div class="project-media project-media--placeholder">
+          <div class="placeholder">
+            <div class="placeholder-title">Bitcoin Analysis</div>
+            <div class="placeholder-sub">Notebook • Indicators • Volatility</div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-top">
+            <div class="project-badge">05</div>
+            <div>
+              <h2>Bitcoin Historical Data Analysis</h2>
+              <p class="project-desc">
+                Analyzed Bitcoin market trends using technical indicators like moving averages and RSI. Preprocessed large datasets using normalization, standardization, and IQR techniques. Delivered insights on volatility and price correlations with trading volume.
+              </p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Data</span>
+            <span class="chip">Indicators</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Python</span>
+          </div>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://github.com/muskaangupta25?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-item">
+        <div class="footer-label">Email</div>
+        <a href="mailto:muskaangupta844@gmail.com">muskaangupta844@gmail.com</a>
+      </div>
+      <div class="footer-item">
+        <div class="footer-label">Connect</div>
+        <a href="https://www.linkedin.com/in/muskaanguptamg" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <div class="footer-item">
+        <div class="footer-label">Work</div>
+        <a href="https://github.com/muskaangupta25" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </div>
-  </section>
-</main>
-<footer class="footer reveal" style="--delay: 460ms;">
-  <div class="footer-inner">
-    <div class="footer-item">
-      <div class="footer-label">Email</div>
-      <a href="mailto:your@email.com">your@email.com</a>
+    <div class="footer-bottom">
+      Built with <span class="heart">♥</span> by Muskaan • © 2025
     </div>
-    <div class="footer-item">
-      <div class="footer-label">Connect</div>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
-    <div class="footer-item">
-      <div class="footer-label">Work</div>
-      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+  </footer>
+
+  <script src="main.js" defer></script>
+
+  <!-- Filter + Search -->
+  <script>
+    const pillBtns = document.querySelectorAll(".pill-btn");
+    const cards = document.querySelectorAll(".project-card");
+    const searchInput = document.querySelector(".search");
+    let activeFilter = "all";
+
+    function applyFilters() {
+      const q = (searchInput.value || "").toLowerCase().trim();
+
+      cards.forEach(card => {
+        const tags = (card.getAttribute("data-tags") || "");
+        const text = card.innerText.toLowerCase();
+        const matchFilter = activeFilter === "all" ? true : tags.includes(activeFilter);
+        const matchSearch = q ? text.includes(q) : true;
+        card.style.display = (matchFilter && matchSearch) ? "" : "none";
+      });
+    }
+
+    pillBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        pillBtns.forEach(b => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        activeFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener("input", applyFilters);
+  </script>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal" aria-hidden="true">
+    <div class="video-backdrop"></div>
+    <div class="video-content" role="dialog" aria-modal="true" aria-label="Demo Video">
+      <button class="video-close" aria-label="Close video">✕</button>
+      <div id="videoSlot"></div>
     </div>
   </div>
-</footer>
+
+  <!-- Video Modal JS -->
+  <script>
+    const modal = document.getElementById("videoModal");
+    const slot = document.getElementById("videoSlot");
+    const closeBtn = document.querySelector(".video-close");
+    const backdrop = document.querySelector(".video-backdrop");
+
+    function openModalWithVideo(src) {
+      // Clear previous
+      slot.innerHTML = "";
+
+      // MP4 local file
+      if (src.endsWith(".mp4")) {
+        const vid = document.createElement("video");
+        vid.controls = true;
+        vid.autoplay = true;
+        vid.playsInline = true;
+        vid.innerHTML = `<source src="${src}" type="video/mp4">`;
+        slot.appendChild(vid);
+      } else {
+        // fallback: iframe (YouTube/Loom embeds)
+        const iframe = document.createElement("iframe");
+        iframe.src = src.includes("?") ? `${src}&autoplay=1` : `${src}?autoplay=1`;
+        iframe.title = "Project Demo Video";
+        iframe.allow = "autoplay; fullscreen";
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        slot.appendChild(iframe);
+      }
+
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      slot.innerHTML = "";
+    }
+
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".video-btn");
+      if (!btn) return;
+      const src = btn.dataset.video;
+      if (!src) return;
+      openModalWithVideo(src);
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+
+    // ESC to close
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    });
+  </script>
 </body>
 </html>
