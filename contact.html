@@ -1,40 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Muskaan Gupta</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="contact-page">
+  <header class="nav-wrap">
+    <nav class="nav">
+      <div class="brand">
+        <div class="brand-title">Muskaan Gupta</div>
+        <div class="brand-subtitle">DATA • AI • PRODUCT</div>
+      </div>
 
-<header class="nav-wrap">
-  <nav class="nav">
-    <div class="brand-title">Muskaan Gupta</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      
-      <li><a class="active" href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main class="container">
-  <section class="section contact">
-    <h2>Let’s Connect</h2>
+  <main class="container contact-container">
+    <section class="contact-hero reveal" style="--delay:0ms;">
+      <h1 class="contact-title">CONTACT</h1>
+      <p class="contact-subtitle">
+        Want to collaborate, talk about opportunities, or just say hi? I’d love to connect.
+      </p>
+      <div class="contact-rule"></div>
+    </section>
 
-    <p>Email is best — I usually respond quickly.</p>
+    <section class="contact-grid">
+      <!-- Left: Contact cards -->
+      <div class="contact-left">
+        <div class="contact-card reveal" style="--delay:120ms;">
+          <div class="contact-card-title">Email</div>
+          <a class="contact-link" href="mailto:muskaangupta844@gmail.com">muskaangupta844@gmail.com</a>
+          <p class="contact-hint">Fastest way to reach me.</p>
+          <button class="copy-btn" data-copy="muskaangupta844@gmail.com">Copy email</button>
+        </div>
 
-    <div class="contact-box">
-      <p>📧 <a href="mailto:muskaangupta@email.com">muskaangupta@email.com</a></p>
-      <p>🔗 <a href="#">LinkedIn</a></p>
-      <p>💻 <a href="#">GitHub</a></p>
-    </div>
-  </section>
-</main>
-<footer class="footer">
+        <div class="contact-card reveal" style="--delay:160ms;">
+          <div class="contact-card-title">LinkedIn</div>
+          <a class="contact-link" href="https://www.linkedin.com/in/muskaanguptamg" target="_blank" rel="noreferrer">
+            linkedin.com/in/muskaanguptamg
+          </a>
+          <p class="contact-hint">For networking + quick updates.</p>
+          <a class="ghost-link" href="https://www.linkedin.com/in/muskaanguptamg" target="_blank" rel="noreferrer">Open LinkedIn ↗</a>
+        </div>
+
+        <div class="contact-card reveal" style="--delay:200ms;">
+          <div class="contact-card-title">GitHub</div>
+          <a class="contact-link" href="https://github.com/muskaangupta25" target="_blank" rel="noreferrer">
+            github.com/muskaangupta25
+          </a>
+          <p class="contact-hint">Code + projects.</p>
+          <a class="ghost-link" href="https://github.com/muskaangupta25" target="_blank" rel="noreferrer">Open GitHub ↗</a>
+        </div>
+
+        <div class="contact-card reveal" style="--delay:240ms;">
+          <div class="contact-card-title">My Resume</div>
+         
+          <a class="ghost-link" href="assets/Muskaan_Gupta_Resume.pdf" download>Download PDF</a>
+        </div>
+      </div>
+
+      <!-- Right: Message panel (no backend required) -->
+      <aside class="contact-right reveal" style="--delay:140ms;">
+        <div class="message-card">
+          <h2>Send a message</h2>
+          <p class="message-sub">
+            This opens your email app with a pre-filled subject + message.
+          </p>
+
+          <form id="mailtoForm" class="message-form">
+            <label>
+              Your name
+              <input type="text" id="name" placeholder="Your name" />
+            </label>
+
+            <label>
+              Subject
+              <input type="text" id="subject" placeholder="Opportunity / Collaboration / Question" />
+            </label>
+
+            <label>
+              Message
+              <textarea id="message" rows="6" placeholder="Write your message here..."></textarea>
+            </label>
+
+            <button type="submit" class="send-btn">Open Email</button>
+
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </form>
+
+          <div class="quick-topics">
+            <div class="quick-title">Quick topics</div>
+            <div class="quick-row">
+              <button type="button" class="topic-btn" data-topic="Internship / Full-time opportunity">Internship / Full-time</button>
+              <button type="button" class="topic-btn" data-topic="Collaboration / project idea">Collaboration</button>
+              <button type="button" class="topic-btn" data-topic="Speaking / events / community">Speaking</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="footer-inner">
       <div class="footer-item">
         <div class="footer-label">Email</div>
@@ -54,6 +136,57 @@
       Made with <span class="heart">♥</span> by Muskaan • © 2025
     </div>
   </footer>
-<script src="main.js" defer></script>
+
+  <script src="main.js" defer></script>
+
+  <!-- Contact page JS (copy + mailto builder) -->
+  <script>
+    // Copy button
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const value = btn.dataset.copy || "";
+        try {
+          await navigator.clipboard.writeText(value);
+          btn.textContent = "Copied ✓";
+          setTimeout(() => (btn.textContent = "Copy email"), 1400);
+        } catch {
+          btn.textContent = "Copy failed";
+          setTimeout(() => (btn.textContent = "Copy email"), 1400);
+        }
+      });
+    });
+
+    // Quick topic buttons
+    document.querySelectorAll(".topic-btn").forEach(t => {
+      t.addEventListener("click", () => {
+        const topic = t.dataset.topic || "";
+        const subject = document.getElementById("subject");
+        subject.value = topic;
+      });
+    });
+
+    // Mailto builder
+    const form = document.getElementById("mailtoForm");
+    const note = document.getElementById("formNote");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = (document.getElementById("name").value || "").trim();
+      const subject = (document.getElementById("subject").value || "Hello").trim();
+      const message = (document.getElementById("message").value || "").trim();
+
+      const body =
+        `Hi Muskaan,%0D%0A%0D%0A` +
+        (message ? `${encodeURIComponent(message)}%0D%0A%0D%0A` : "") +
+        (name ? `— ${encodeURIComponent(name)}` : "");
+
+      const mailto = `mailto:muskaangupta844@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      note.textContent = "Opening your email app…";
+      window.location.href = mailto;
+      setTimeout(() => (note.textContent = ""), 1500);
+    });
+  </script>
 </body>
 </html>
