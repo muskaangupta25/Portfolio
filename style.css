@@ -951,4 +951,245 @@
   @media (max-width: 920px){
     .projects-grid{ grid-template-columns: 1fr; }
   }
-    
+/* ===== CONTACT PAGE ===== */
+.contact-container{
+  padding-bottom: 60px;
+}
+
+.contact-title{
+  font-family: Fraunces, serif;
+  font-size: 56px;
+  letter-spacing: 2px;
+}
+
+.contact-subtitle{
+  margin-top: 10px;
+  color: var(--muted);
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.contact-rule{
+  height: 1px;
+  background: var(--border);
+  margin-top: 18px;
+}
+
+.contact-grid{
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.contact-left{
+  display: grid;
+  gap: 14px;
+}
+
+.contact-card{
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 14px 40px rgba(47, 31, 55, 0.05);
+}
+
+.contact-card-title{
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-link{
+  display: inline-block;
+  color: rgba(49, 31, 55, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.contact-link:hover{
+  text-decoration: underline;
+}
+
+.contact-hint{
+  margin-top: 6px;
+  color: rgba(47, 31, 55, 0.65);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.copy-btn{
+  margin-top: 12px;
+  border: 1px solid rgba(117, 100, 139, 0.22);
+  background: rgba(255,255,255,0.55);
+  color: var(--text);
+  padding: 9px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.copy-btn:hover{
+  background: rgba(130, 100, 139, 0.1);
+}
+
+.ghost-link{
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgba(49, 31, 55, 0.75);
+}
+.ghost-link:hover{
+  text-decoration: underline;
+}
+
+/* Right panel */
+.message-card{
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(48, 31, 55, 0.05);
+}
+
+.message-card h2{
+  font-family: Fraunces, serif;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.message-sub{
+  color: rgba(46, 31, 55, 0.7);
+  line-height: 1.7;
+}
+
+.message-form{
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.message-form label{
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(44, 31, 55, 0.8);
+  font-weight: 700;
+}
+
+.message-form input,
+.message-form textarea{
+  border: 1px solid rgba(122, 100, 139, 0.22);
+  background: rgba(255,255,255,0.65);
+  padding: 10px 12px;
+  border-radius: 14px;
+  outline: none;
+  font-weight: 500;
+}
+
+.message-form input:focus,
+.message-form textarea:focus{
+  box-shadow: 0 0 0 4px rgba(121, 100, 139, 0.16);
+}
+
+.send-btn{
+  margin-top: 4px;
+  border: 1px solid rgba(117, 100, 139, 0.28);
+  background: rgba(117, 100, 139, 0.16);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.send-btn:hover{
+  background: rgba(125, 100, 139, 0.22);
+}
+
+.form-note{
+  font-size: 12px;
+  color: rgba(43, 31, 55, 0.65);
+}
+
+.quick-topics{
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(123, 100, 139, 0.16);
+}
+
+.quick-title{
+  font-weight: 800;
+  color: rgba(44, 31, 55, 0.75);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.quick-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topic-btn{
+  border: 1px solid rgba(132, 100, 139, 0.22);
+  background: rgba(255,255,255,0.55);
+  color: rgba(47, 31, 55, 0.85);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 13px;
+}
+.topic-btn:hover{
+  background: rgba(91, 60, 118, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 920px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/* Results pills (how it helped users) */
+.project-results{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+ 
+}
+
+.result{
+  font-size: 13px;
+  color: rgba(31,41,55,0.78);
+  background: rgba(100,116,139,0.10);
+  border: 1px solid rgba(100,116,139,0.18);
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+/* Make the video area responsive and fill the modal */
+#videoSlot {
+  width: 100%;
+}
+
+/* 16:9 wrapper for both iframe + mp4 */
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Fill wrapper */
+.video-frame iframe,
+.video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
